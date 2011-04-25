@@ -30,28 +30,28 @@
 % exactly nOffsetFrames into the video.
 %
 
-YAML='D:\Temp\20110228_1115_newTest.yaml'
+YAML='\\samuellabhd1\QwenData\110120\20110120_1249_hpIs199#2.yaml'
 
-startf=24; %HUDS internal frame number (not nth frame)
-endf=800;
+startf=28097; %HUDS internal frame number (not nth frame)
+endf=29897;
 
 
-videoIn='C:\Documents and settings\andy\TestSwimLong.avi';
-nOffsetFrames=23; %number of frames from start of videoIn until the startf'th frame
+videoIn='\\samuellabhd1\QwenData\110120\20110120_1249_hpIs199#2.avi';
+nOffsetFrames=200; %number of frames from start of videoIn until the startf'th frame
 
 GREEN=2;
 BLUE=3;
 
-COLOR=GREEN; %Green is 2. Blue is 3. (RGB)
+COLOR=BLUE; %Green is 2. Blue is 3. (RGB)
 
 
 
 
 DISPLAY=0 %Show a debugging display of whats going on
-READINYAML=1 %Read in the YAML (required the first time) 
+READINYAML=0 %Read in the YAML (required the first time) 
 CREATE_HUDS=1 %Create the heads up display (frame number, DLP on display)
 
-manual=1;
+manual=0;
 
 %Protocol Information
 if (manual>0)
