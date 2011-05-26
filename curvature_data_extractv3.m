@@ -47,8 +47,22 @@ for j=1:numframes
     
 end
 
-figure,plot(1:numframes,curv/abs(max(curv)),'k-'); 
-hold on, plot(1:numframes,curv_dot/abs(max(curv_dot)),'r-');
+figure (2);
+
+for j=1:numframes
+    i=istart+(j-1);
+    if ~mcd(i).DLPisOn
+        plot(j,curv(j)/abs(max(curv)),'k.');
+        plot(j,curv_dot/abs(max(curv_dot)),'rs');
+        hold on;
+    else
+        plot(j,curv(j)/abs(max(curv)),'b.');
+        plot(j,curv_dot/abs(max(curv_dot)),'bs');
+        hold on;
+    end
+end
+        
+
 
 
 

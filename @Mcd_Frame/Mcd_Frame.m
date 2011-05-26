@@ -19,6 +19,8 @@ classdef Mcd_Frame
         ProtocolStep =0; %what step within protocol is currently selected
         GreenLaser =0; %int 0-100 of relative laser power. -1 means leaser is not being controlled programmatically
         BlueLaser =0; %int 0-100 of relative laser power. -1 means leaser is not being controlled programmatically
+        HeadCurv =0; %curvature of the head
+        HeadCurvDeriv =0; %derivative of curvature of the head
     end
     
     methods (Static)

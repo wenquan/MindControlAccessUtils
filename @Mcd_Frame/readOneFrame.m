@@ -54,14 +54,16 @@ while ~isEndOfFrame(tline)
                 [mcdf.ProtocolIsOn tline]=getVal(fid,tline);
             case 'ProtocolStep'
                 [mcdf.ProtocolStep tline]=getVal(fid,tline);
+            case 'HeadCurv'
+                [mcdf.HeadCurv tline]=getVal(fid,tline);
+            case 'HeadCurvDeriv'
+                [mcdf.HeadCurvDeriv tline]=getVal(fid,tline); 
             case 'LaserPower'
                 [mcdf.GreenLaser mcdf.BlueLaser tline]=getLaserPower(fid,tline);
             otherwise
                 disp(['fname matched nothing: ',fname])
                 tline=fgets(fid);
-                
-                
-        end
+       end
         
         
         
