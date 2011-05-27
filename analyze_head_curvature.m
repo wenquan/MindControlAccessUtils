@@ -19,8 +19,8 @@ T1=mcd(istart).TimeElapsed;
 figure;
 
 for j=2:numframes
-    t=mcd(i).TimeElapsed;
     i=istart+(j-1);
+    t=mcd(i).TimeElapsed;
     if ~mcd(i).DLPisOn
         plot([mcd(i-1).TimeElapsed,mcd(i).TimeElapsed]-T1,[mcd(i-1).HeadCurv*100,mcd(i).HeadCurv*100],'k','Linewidth',2);
         hold on;
